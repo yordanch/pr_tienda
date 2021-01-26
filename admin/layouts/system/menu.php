@@ -1,9 +1,29 @@
 <div class="adminx-sidebar expand-hover push">
     <ul class="sidebar-nav">
         <li class="sidebar-nav-item">
-            <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#tienda_menu" aria-expanded="false" aria-controls="example">
+            <a href="#" class="sidebar-nav-link active">
                 <span class="sidebar-nav-icon">
                     <i data-feather="home"></i>
+                </span>
+                <span class="sidebar-nav-name">
+                    Resumen
+                </span>
+            </a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a href="../" class="sidebar-nav-link" target="_blank">
+                <span class="sidebar-nav-icon">
+                    <i data-feather="globe"></i>
+                </span>
+                <span class="sidebar-nav-name">
+                    Tienda
+                </span>
+            </a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#tienda_menu" aria-expanded="false" aria-controls="example">
+                <span class="sidebar-nav-icon">
+                    <i data-feather="monitor"></i>
                 </span>
                 <span class="sidebar-nav-name"> Tiendas </span>
                 <span class="sidebar-nav-end">
@@ -160,7 +180,7 @@
             </a>
         </li>
         <li class="sidebar-nav-item">
-            <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#apli_menu" aria-expanded="false" aria-controls="example">
+            <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#report_menu" aria-expanded="false" aria-controls="example">
                 <span class="sidebar-nav-icon">
                     <i data-feather="pie-chart"></i>
                 </span>
@@ -170,7 +190,7 @@
                 </span>
             </a>
 
-            <ul class="sidebar-sub-nav collapse" id="apli_menu">
+            <ul class="sidebar-sub-nav collapse" id="report_menu">
                 <li class="sidebar-nav-item">
                     <a href="./layouts/charts_chartjs.html" class="sidebar-nav-link">
                         <span class="sidebar-nav-abbr"> </span>
