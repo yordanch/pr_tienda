@@ -1,7 +1,11 @@
+<?php
+    $path = isset($_path)?$_path:"";
+    $option = isset($_option)?$_option:0;
+?>
 <div class="adminx-sidebar expand-hover push">
     <ul class="sidebar-nav">
         <li class="sidebar-nav-item">
-            <a href="#" class="sidebar-nav-link active">
+            <a href="<?=$path;?>" class="sidebar-nav-link <?=$option==0?'active':'';?>">
                 <span class="sidebar-nav-icon">
                     <i data-feather="home"></i>
                 </span>
@@ -11,7 +15,7 @@
             </a>
         </li>
         <li class="sidebar-nav-item">
-            <a href="../" class="sidebar-nav-link" target="_blank">
+            <a href="<?=$path;?>../" class="sidebar-nav-link" target="_blank">
                 <span class="sidebar-nav-icon">
                     <i data-feather="globe"></i>
                 </span>
@@ -19,6 +23,60 @@
                     Tienda
                 </span>
             </a>
+        </li>
+        <li class="sidebar-nav-item">
+            <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#user_menu" aria-expanded="false" aria-controls="example">
+                <span class="sidebar-nav-icon">
+                    <i data-feather="align-justify"></i>
+                </span>
+                <span class="sidebar-nav-name"> Usuarios </span>
+                <span class="sidebar-nav-end">
+                    <i data-feather="chevron-right" class="nav-collapse-icon"></i>
+                </span>
+            </a>
+
+            <ul class="sidebar-sub-nav collapse <?=$option==1?'show':'';?>" id="user_menu">
+                <li class="sidebar-nav-item">
+                    <a href="<?=$path;?>layouts/modules/usuario_add.php" class="sidebar-nav-link">
+                        <span class="sidebar-nav-abbr"> </span>
+                        <span class="sidebar-nav-name">
+                            Agregar usuarios
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="./layouts/charts_morris.html" class="sidebar-nav-link">
+                        <span class="sidebar-nav-abbr"> </span>
+                        <span class="sidebar-nav-name">
+                            Agregar trabajador
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="./layouts/charts_chartjs.html" class="sidebar-nav-link">
+                        <span class="sidebar-nav-abbr"> </span>
+                        <span class="sidebar-nav-name">
+                            Usuarios
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="./layouts/charts_morris.html" class="sidebar-nav-link">
+                        <span class="sidebar-nav-abbr"> </span>
+                        <span class="sidebar-nav-name">
+                            Trabajador
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar-nav-item">
+                    <a href="./layouts/charts_morris.html" class="sidebar-nav-link">
+                        <span class="sidebar-nav-abbr"> </span>
+                        <span class="sidebar-nav-name">
+                            Chat
+                        </span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class="sidebar-nav-item">
             <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#tienda_menu" aria-expanded="false" aria-controls="example">
@@ -46,45 +104,6 @@
                         <span class="sidebar-nav-abbr"> </span>
                         <span class="sidebar-nav-name">
                             Categorias
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li class="sidebar-nav-item">
-            <a class="sidebar-nav-link collapsed" data-toggle="collapse" href="#user_menu" aria-expanded="false" aria-controls="example">
-                <span class="sidebar-nav-icon">
-                    <i data-feather="align-justify"></i>
-                </span>
-                <span class="sidebar-nav-name"> Usuarios </span>
-                <span class="sidebar-nav-end">
-                    <i data-feather="chevron-right" class="nav-collapse-icon"></i>
-                </span>
-            </a>
-
-            <ul class="sidebar-sub-nav collapse" id="user_menu">
-                <li class="sidebar-nav-item">
-                    <a href="./layouts/charts_chartjs.html" class="sidebar-nav-link">
-                        <span class="sidebar-nav-abbr"> </span>
-                        <span class="sidebar-nav-name">
-                            Usuarios
-                        </span>
-                    </a>
-                </li>
-
-                <li class="sidebar-nav-item">
-                    <a href="./layouts/charts_morris.html" class="sidebar-nav-link">
-                        <span class="sidebar-nav-abbr"> </span>
-                        <span class="sidebar-nav-name">
-                            Trabajador
-                        </span>
-                    </a>
-                </li>
-                <li class="sidebar-nav-item">
-                    <a href="./layouts/charts_morris.html" class="sidebar-nav-link">
-                        <span class="sidebar-nav-abbr"> </span>
-                        <span class="sidebar-nav-name">
-                            Chat
                         </span>
                     </a>
                 </li>
