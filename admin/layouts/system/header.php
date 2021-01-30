@@ -1,6 +1,9 @@
+<?php
+    $path = isset($_path)?$_path:"";
+?>
 <nav class="navbar navbar-expand justify-content-between fixed-top">
     <a class="navbar-brand mb-0 h1 d-none d-md-block" href="">
-        <img src="./demo/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="" />
+        <img src="<?=$path;?>demo/img/logo.png" class="navbar-brand-image d-inline-block align-top mr-2" alt="" />
         Panel de control
     </a>
 
@@ -88,7 +91,7 @@
         <!-- Notifications -->
         <li class="nav-item dropdown">
             <a class="nav-link avatar-with-name" id="navbarDropdownMenuLink" data-toggle="dropdown" href="#">
-                <img src="../img/System/avatar.jpg" class="d-inline-block align-top" alt="">
+                <img src="<?=$path;?>../img/System/avatar.jpg" class="d-inline-block align-top" alt="">
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="#">Perfil</a>
