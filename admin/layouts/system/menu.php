@@ -100,7 +100,7 @@
                 </li>
 
                 <li class="sidebar-nav-item">
-                    <a href="./layouts/charts_morris.html" class="sidebar-nav-link">
+                    <a href="<?=$path;?>layouts/modules/categoria_add.php" class="sidebar-nav-link">
                         <span class="sidebar-nav-abbr"> </span>
                         <span class="sidebar-nav-name">
                             Categorias

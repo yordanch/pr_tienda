@@ -57,21 +57,57 @@
                                 <div class="card-body collapse show" id="card2">
                                     <form>
                                         <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">RUC</label>
+                                            <label for="inputruc" class="col-sm-2 col-form-label form-label">RUC</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+                                                <input type="text" class="form-control" id="inputruc" placeholder="Ingresar RUC">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Razón social</label>
+                                            <label for="inputdireccion" class="col-sm-2 col-form-label form-label">Dirección</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+                                                <input type="text" class="form-control" id="inputdireccion" placeholder="Ingresar dirección">
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label for="inputnombre" class="col-sm-2 col-form-label form-label">Razón social</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="inputnombre" placeholder="Ingresar nombre">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Sexo</label>
+                                            <label for="inputtelefono" class="col-sm-2 col-form-label form-label">Telefono</label>
                                             <div class="col-sm-10">
-                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                <input type="text" class="form-control" id="inputtelefono" placeholder="Ingresar teléfono">
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label for="inputcord" class="col-sm-2 col-form-label form-label">Coordenadas</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="inputcord" placeholder="Ingresar coordenadas">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputfreg" class="col-sm-2 col-form-label form-label">Fecha registro</label>
+                                            <div class="col-sm-10">
+                                                <input type="date" class="form-control" id="inputfreg" placeholder="Fecha registro">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputhreg" class="col-sm-2 col-form-label form-label">Hora registro</label>
+                                            <div class="col-sm-10">
+                                                <input type="time" class="form-control" id="inputhreg" placeholder="Hora registro">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputcorreo" class="col-sm-2 col-form-label form-label">Correo institucional</label>
+                                            <div class="col-sm-10">
+                                                <input type="mail" class="form-control" id="inputcorreo" placeholder="@mail.com">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputdist" class="col-sm-2 col-form-label form-label">Distrito</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" id="inputdist">
                                                     <option>1</option>
                                                     <option>2</option>
                                                     <option>3</option>
@@ -81,21 +117,15 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Telefono</label>
+                                            <label for="inputuscorreo" class="col-sm-2 col-form-label form-label">Correo Administrador</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+                                                <input type="text" class="form-control" id="inputuscorreo" placeholder="@mail.com">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Fecha nacimiento</label>
+                                            <label for="inputcate" class="col-sm-2 col-form-label form-label">Categoría tienda</label>
                                             <div class="col-sm-10">
-                                                <input type="date" class="form-control" id="inputEmail3" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Acceso</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                <select class="form-control" id="inputcate">
                                                     <option>1</option>
                                                     <option>2</option>
                                                     <option>3</option>
@@ -104,18 +134,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Tipo de usuario</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
+
                                         <button type="submit" class="btn btn-primary">Actualizar</button>
                                     </form>
                                 </div>
@@ -136,7 +155,7 @@
                                     <form>
                                         <div class="form-group">
                                             <label class="form-label" for="exampleInputEmail1">Correo</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese correo">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="@mail.com">
                                             <small id="emailHelp" class="form-text text-muted">Ingrese un correo valido</small>
                                         </div>
                                         <div class="form-group">
