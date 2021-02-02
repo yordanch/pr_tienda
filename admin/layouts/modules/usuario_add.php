@@ -20,7 +20,7 @@
         <!-- // Header -->
 
         <!-- expand-hover push -->
-        
+
         <?php
             include("../system/menu.php");
         ?>
@@ -42,113 +42,113 @@
                         <h1>Agregar usuarios</h1>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card mb-grid">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="card-header-title">Datos personales</div>
+                    <form class="" action="#" method="post" onSubmit="return add(this)"> <!-- Modificar aquí -->
+                        <div class="row">
+                            <input type="hidden" name="option_form" id="type_form" value="add"> <!-- Modificar aquí -->
+                            <input type="hidden" name="type_form" id="type_form" value="usuario"> <!-- Modificar aquí -->
+                            <div class="col-lg-6">
+                                <div class="card mb-grid">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <div class="card-header-title">Datos personales</div>
 
-                                    <nav class="card-header-actions">
-                                        <a class="card-header-action" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
-                                            <i data-feather="minus-circle"></i>
-                                        </a>
-                                    </nav>
-                                </div>
-                                <div class="card-body collapse show" id="card2">
-                                    <form>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Nombres</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+                                        <nav class="card-header-actions">
+                                            <a class="card-header-action" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
+                                                <i data-feather="minus-circle"></i>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="card-body collapse show" id="card2">
+                                        <div>
+                                            <div class="form-group row">
+                                                <label for="nombre_add" class="col-sm-2 col-form-label form-label">Nombres</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="nombre_add" name="nombre_add" placeholder="Nombres">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="apell_add" class="col-sm-2 col-form-label form-label">Apellidos</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="apell_add" name="apell_add" placeholder="Apellidos">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="sexo_add" class="col-sm-2 col-form-label form-label">Sexo</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="sexo_add" name="sexo_add">
+                                                        <option value="f">Femenino</option>
+                                                        <option value="m">Masculino</option>
+                                                        <option value="">Otro</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="telefono_add" class="col-sm-2 col-form-label form-label">Telefono</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="telefono_add" name="telefono_add" placeholder="Telefono">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="fechan_add" class="col-sm-2 col-form-label form-label">Fecha nacimiento</label>
+                                                <div class="col-sm-10">
+                                                    <input type="date" class="form-control" id="fechan_add" name="fechan_add" placeholder="Fecha de nacimiento">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="acceso_add" class="col-sm-2 col-form-label form-label">Acceso</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="acceso_add" name="acceso_add">
+                                                        <option value="NO">NO</option>
+                                                        <option value="SI">SI</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="tipouser_add" class="col-sm-2 col-form-label form-label">Tipo de usuario</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="tipouser_add" name="tipouser_add">
+                                                        <option value="Usuario">Usuario</option>
+                                                        <option value="Administrador">Administrador</option>
+                                                        <option value="Vendedor">Vendedor</option>
+                                                        <option value="Gerente">Gerente</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Apellidos</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Sexo</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Telefono</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Fecha nacimiento</label>
-                                            <div class="col-sm-10">
-                                                <input type="date" class="form-control" id="inputEmail3" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Acceso</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputEmail3" class="col-sm-2 col-form-label form-label">Tipo de usuario</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="exampleFormControlSelect1">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card mb-grid">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="card-header-title">Datos de acceso</div>
+                            <div class="col-lg-6">
+                                <div class="card mb-grid">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <div class="card-header-title">Datos de acceso</div>
 
-                                    <nav class="card-header-actions">
-                                        <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
-                                            <i data-feather="minus-circle"></i>
-                                        </a>
-                                    </nav>
-                                </div>
-                                <div class="card-body collapse show" id="card1">
-                                    <form>
-                                        <div class="form-group">
-                                            <label class="form-label" for="exampleInputEmail1">Correo</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese correo">
-                                            <small id="emailHelp" class="form-text text-muted">Ingrese un correo valido</small>
+                                        <nav class="card-header-actions">
+                                            <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
+                                                <i data-feather="minus-circle"></i>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="card-body collapse show" id="card1">
+                                        <div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="correo_add">Correo</label>
+                                                <input type="email" class="form-control" id="correo_add" name="correo_add" aria-describedby="correo_add_help" placeholder="Ingrese correo">
+                                                <small id="correo_add_help" class="form-text text-muted">Ingrese un correo valido</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="contras_add">Contraseña</label>
+                                                <input type="password" class="form-control" id="contras_add" name="contras_add" placeholder="Ingrese la contraseña">
+                                            </div>
+                                            <!-- <button type="submit" class="btn btn-primary">Actualizar</button> -->
                                         </div>
-                                        <div class="form-group">
-                                            <label class="form-label" for="exampleInputPassword1">Contraseña</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese la contraseña">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -160,6 +160,11 @@
     <script src="../../../js/bootstrap4.0.0.min.js"></script>
     <script src="../../../admin/dist/js/vendor.js"></script>
     <script src="../../../admin/dist/js/adminx.js"></script>
+
+    <script src="../../../js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="../../../css/sweetalert2.min.css">
+    <script src="../../../script/functions.js"></script>
+    <script src="../../script/usuario.js"></script>  <!-- Modificar aquí -->
 
     <!-- If you prefer vanilla JS these are the only required scripts -->
     <!-- script src="../dist/js/vendor.js"></script>
