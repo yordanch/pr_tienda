@@ -38,10 +38,9 @@
 		print_r(json_encode($rs));
 		return;
 	}
-	
-	if($tabl=="usuario"){
-		$usr = new usuarios();
-		$usr->serv = $os;
+	if($tabl=="tienda"){
+		$tienda = new Tienda();
+		$tienda->serv = $os;
 		switch($type){
 			case "add":
 				$rs = [];
