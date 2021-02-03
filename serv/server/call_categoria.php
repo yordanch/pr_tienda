@@ -8,7 +8,7 @@
 	//calls class's
 	require_once("openServer.php");
 	
-	require_once("../class/tienda.php");
+	require_once("../class/categ_tien.php");
 	
 	//datos require
 	$rs = array();
@@ -38,29 +38,21 @@
 		print_r(json_encode($rs));
 		return;
 	}
-	if($tabl=="tienda"){
-		$usr = new tiendas();
+	
+	if($tabl=="categ_tien"){
+		$usr = new categ_tien();
 		$usr->serv = $os;
 		switch($type){
 			case "add":
 				$rs = [];
-				$usr->ruc = $data["ruc_add"];
-				$usr->direccion = $data["direc_add"];
-				$usr->nombre = $data["rs_add"];
-				$usr->telefono = $data["telef_add"];
-				$usr->coordinadas = $data["coord_add"];
-				$usr->correo = $data["emailinst_add"];
-				$usr->distrito = $data["distrito_add"];
-				$usr->usuarios_correo = $data["email_add"];
-				$usr->categ_tien_id = $data["categoria_add"];
+				$usr->categoria = $data["nombre_add"];
+				$usr->correo = $data["correo_add"];
 				// $usr->fechareg = $data[""];
 				// $usr->horareg = $data[""];
+
 				$rs = $usr->add();
 				print_r(json_encode($rs));
 				break;
-
-				
-				
 			case "upd":
 				$rs = [];
 				$matri->idmatricula = "";

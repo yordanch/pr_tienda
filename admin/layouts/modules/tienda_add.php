@@ -25,7 +25,7 @@
             include("../system/menu.php");
         ?>
 
-        <!-- Main Content -->
+        <!-- Main Content -->        
         <div class="adminx-content">
             <div class="adminx-main-content">
                 <div class="container-fluid">
@@ -41,133 +41,94 @@
                     <div class="pb-3">
                         <h1>Agregar tienda</h1>
                     </div>
+                    <form class="" action="#" method="post" onSubmit="return add(this)"> <!-- Modificar aquí -->
+                        <div class="row">
+                            <input type="hidden" name="option_form" id="type_form" value="add"> <!-- Modificar aquí -->
+                            <input type="hidden" name="type_form" id="type_form" value="tienda"> <!-- Modificar aquí -->
+                            <div class="col-lg-6">
+                                <div class="card mb-grid">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <div class="card-header-title">Datos de tienda</div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card mb-grid">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="card-header-title">Datos de tienda</div>
-
-                                    <nav class="card-header-actions">
-                                        <a class="card-header-action" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
-                                            <i data-feather="minus-circle"></i>
-                                        </a>
-                                    </nav>
-                                </div>
-                                <div class="card-body collapse show" id="card2">
-                                    <form>
-                                        <div class="form-group row">
-                                            <label for="inputruc" class="col-sm-2 col-form-label form-label">RUC</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputruc" placeholder="Ingresar RUC">
+                                        <nav class="card-header-actions">
+                                            <a class="card-header-action" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
+                                                <i data-feather="minus-circle"></i>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="card-body collapse show" id="card2">
+                                            <div class="form-group row">
+                                                <label for="inputruc" class="col-sm-2 col-form-label form-label">RUC</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="ruc_add" name="ruc_add" placeholder="Ingresar RUC">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputdireccion" class="col-sm-2 col-form-label form-label">Dirección</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputdireccion" placeholder="Ingresar dirección">
+                                            <div class="form-group row">
+                                                <label for="inputdireccion" class="col-sm-2 col-form-label form-label">Dirección</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="direc_add" name="direc_add" placeholder="Ingresar dirección">
+                                                </div>
                                             </div>
-                                        </div>
-                                         <div class="form-group row">
-                                            <label for="inputnombre" class="col-sm-2 col-form-label form-label">Razón social</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputnombre" placeholder="Ingresar nombre">
+                                             <div class="form-group row">
+                                                <label for="inputnombre" class="col-sm-2 col-form-label form-label">Razón social</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="rs_add" name="rs_add" placeholder="Ingresar nombre">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputtelefono" class="col-sm-2 col-form-label form-label">Telefono</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputtelefono" placeholder="Ingresar teléfono">
+                                            <div class="form-group row">
+                                                <label for="inputtelefono" class="col-sm-2 col-form-label form-label">Telefono</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="telef_add" name="telef_add" placeholder="Ingresar teléfono">
+                                                </div>
                                             </div>
-                                        </div>
-                                         <div class="form-group row">
-                                            <label for="inputcord" class="col-sm-2 col-form-label form-label">Coordenadas</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputcord" placeholder="Ingresar coordenadas">
+                                             <div class="form-group row">
+                                                <label for="inputcord" class="col-sm-2 col-form-label form-label">Coordenadas</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="coord_add" name="coord_add" placeholder="Ingresar coordenadas">
+                                                </div>
+                                            </div>                                           
+                                            <div class="form-group row">
+                                                <label for="inputcorreo" class="col-sm-2 col-form-label form-label">Correo institucional</label>
+                                                <div class="col-sm-10">
+                                                    <input type="mail" class="form-control" id="emailinst_add" name="emailinst_add" placeholder="@mail.com">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputfreg" class="col-sm-2 col-form-label form-label">Fecha registro</label>
-                                            <div class="col-sm-10">
-                                                <input type="date" class="form-control" id="inputfreg" placeholder="Fecha registro">
+                                            <div class="form-group row">
+                                                <label for="inputdist" class="col-sm-2 col-form-label form-label">Distrito</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="distrito_add" name="distrito_add">
+                                                        <option value="Andahuaylas">Andahuaylas</option>
+                                                        <option value="SanJeronimo">San Jeronimo</option>
+                                                        <option value="Talavera">Talavera</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputhreg" class="col-sm-2 col-form-label form-label">Hora registro</label>
-                                            <div class="col-sm-10">
-                                                <input type="time" class="form-control" id="inputhreg" placeholder="Hora registro">
+                                            <div class="form-group row">
+                                                <label for="inputuscorreo" class="col-sm-2 col-form-label form-label">Correo Administrador</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="email_add" name="email_add" placeholder="@mail.com">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputcorreo" class="col-sm-2 col-form-label form-label">Correo institucional</label>
-                                            <div class="col-sm-10">
-                                                <input type="mail" class="form-control" id="inputcorreo" placeholder="@mail.com">
+                                            <div class="form-group row">
+                                                <label for="inputcate" class="col-sm-2 col-form-label form-label">Categoría tienda</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" id="categoria_add" name="categoria_add">
+                                                        <option value="Ropas">Ropas</option>
+                                                        <option value="Comida">Comida</option>
+                                                        <option value="Zapateria">Zapateria</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputdist" class="col-sm-2 col-form-label form-label">Distrito</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="inputdist">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputuscorreo" class="col-sm-2 col-form-label form-label">Correo Administrador</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputuscorreo" placeholder="@mail.com">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputcate" class="col-sm-2 col-form-label form-label">Categoría tienda</label>
-                                            <div class="col-sm-10">
-                                                <select class="form-control" id="inputcate">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                                    </form>
+                                            
+                                            <!-- <button type="submit" class="btn btn-primary">Actualizar</button> -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card mb-grid">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="card-header-title">Datos de acceso</div>
-
-                                    <nav class="card-header-actions">
-                                        <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
-                                            <i data-feather="minus-circle"></i>
-                                        </a>
-                                    </nav>
-                                </div>
-                                <div class="card-body collapse show" id="card1">
-                                    <form>
-                                        <div class="form-group">
-                                            <label class="form-label" for="exampleInputEmail1">Correo</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="@mail.com">
-                                            <small id="emailHelp" class="form-text text-muted">Ingrese un correo valido</small>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-label" for="exampleInputPassword1">Contraseña</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese la contraseña">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                                    </form>
-                                </div>
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary">Agregar</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -179,6 +140,12 @@
     <script src="../../../js/bootstrap4.0.0.min.js"></script>
     <script src="../../../admin/dist/js/vendor.js"></script>
     <script src="../../../admin/dist/js/adminx.js"></script>
+
+    <script src="../../../js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="../../../css/sweetalert2.min.css">
+    <script src="../../../script/functions.js"></script>
+
+    <script src="../../script/tienda.js"></script>  <!-- Modificar aquí -->
 
     <!-- If you prefer vanilla JS these are the only required scripts -->
     <!-- script src="../dist/js/vendor.js"></script>

@@ -1,5 +1,5 @@
 <?php 
-	class Tienda
+	class tiendas
 	{
 		var $ruc;
 		var $direccion;
@@ -20,8 +20,8 @@
 	    }
 	    function add(){
 			$res = array();
-            $val = "'".$this->nombres."', '".$this->apellido."', '".$this->correo."', '".$this->telefono."', '".$this->sexo."', '".$this->fechana."', '".$this->acceso."', '".$this->tipo."', '".$this->fechareg."', '".$this->horareg."', '".$this->passw."'";
-            $table = "usuarios(nombres, apellido, correo, telefono, sexo, fechana, acceso, tipo, fechareg, horareg, passw)";
+            $val = "'".$this->ruc."', '".$this->direccion."', '".$this->nombre."', '".$this->telefono."', '".$this->coordinadas."', '".$this->fechareg."', '".$this->horareg."', '".$this->correo."', '".$this->distrito."', '".$this->usuarios_correo."', '".$this->categ_tien_id."'";
+            $table = "tienda(ruc, direccion, nombre, telefono, coordinadas, fechareg, horareg, correo, distrito, usuarios_correo, categ_tien_id)";
             if($v=="") $this->serv->cnS = "INSERT INTO ".$table." VALUES (".$val.")";
             else $this->serv->cnS = "INSERT INTO ".$table." VALUES ".$v."";
             
