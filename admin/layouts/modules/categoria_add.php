@@ -20,7 +20,7 @@
         <!-- // Header -->
 
         <!-- expand-hover push -->
-        
+
         <?php
             include("../system/menu.php");
         ?>
@@ -33,75 +33,51 @@
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb adminx-page-breadcrumb">
                             <!-- <li class="breadcrumb-item"><a href="#">Usuarios</a></li> -->
-                            <li class="breadcrumb-item">Categoría</li>
-                            <li class="breadcrumb-item active aria-current=" page>Agregar categoría</li>
+                            <li class="breadcrumb-item">Categoria</li>
+                            <li class="breadcrumb-item active aria-current=" page>Agregar Categoria</li>
                         </ol>
                     </nav>
 
                     <div class="pb-3">
-                        <h1>Agregar categoría</h1>
+                        <h1>Agregar Categoria</h1>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card mb-grid">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="card-header-title">Campos de categoría</div>
+                    <form class="" action="#" method="post" onSubmit="return add(this)"> <!-- Modificar aquí -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card mb-grid">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <div class="card-header-title">Campos de categoría</div>
 
-                                    <nav class="card-header-actions">
-                                        <a class="card-header-action" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
-                                            <i data-feather="minus-circle"></i>
-                                        </a>
-                                    </nav>
-                                </div>
-                                <div class="card-body collapse show" id="card2">
-                                    <form>
-                                        <div class="form-group row">
-                                            <label for="inputnombrec" class="col-sm-2 col-form-label form-label">Nombre de categoría</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputnombrec" placeholder="Ingresar categoría">
+                                        <nav class="card-header-actions">
+                                            <a class="card-header-action" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
+                                                <i data-feather="minus-circle"></i>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="card-body collapse show" id="card2">
+                                            <div class="form-group row">
+                                                <label for="inputnombrec" class="col-sm-2 col-form-label form-label">Nombre de categoría</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="nombre_add" name="nombre_add" placeholder="Ingresar categoría">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputcorreoc" class="col-sm-2 col-form-label form-label">Correo electrónico</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputcorreoc" placeholder="@mail.com">
-                                            </div>
-                                        </div>                                        
+                                            <div class="form-group row">
+                                                <label for="inputcorreoc" class="col-sm-2 col-form-label form-label">Correo electrónico</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="correo_add" name="correo_add" placeholder="@mail.com">
+                                                </div>
+                                            </div>                                        
 
-                                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                                    </form>
+                                             <!-- <button type="submit" class="btn btn-primary">Actualizar</button> -->
+                                    </div>
                                 </div>
-                            </div>
+                            </div> 
+                            <div class="col-lg-12">
+                                <button type="submit" class="btn btn-primary">Agregar</button>
+                            </div>                           
                         </div>
-                        <div class="col-lg-6">
-                            <div class="card mb-grid">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="card-header-title">Datos de acceso</div>
-
-                                    <nav class="card-header-actions">
-                                        <a class="card-header-action" data-toggle="collapse" href="#card1" aria-expanded="false" aria-controls="card1">
-                                            <i data-feather="minus-circle"></i>
-                                        </a>
-                                    </nav>
-                                </div>
-                                <div class="card-body collapse show" id="card1">
-                                    <form>
-                                        <div class="form-group">
-                                            <label class="form-label" for="exampleInputEmail1">Correo</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="@mail.com">
-                                            <small id="emailHelp" class="form-text text-muted">Ingrese un correo valido</small>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="form-label" for="exampleInputPassword1">Contraseña</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese la contraseña">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -113,6 +89,11 @@
     <script src="../../../js/bootstrap4.0.0.min.js"></script>
     <script src="../../../admin/dist/js/vendor.js"></script>
     <script src="../../../admin/dist/js/adminx.js"></script>
+
+    <script src="../../../js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="../../../css/sweetalert2.min.css">
+    <script src="../../../script/functions.js"></script>
+    <script src="../../script/categoria.js"></script>  <!-- Modificar aquí -->
 
     <!-- If you prefer vanilla JS these are the only required scripts -->
     <!-- script src="../dist/js/vendor.js"></script>
