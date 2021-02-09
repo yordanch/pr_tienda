@@ -65,7 +65,7 @@
                                             <div class="form-group row">
                                                 <label for="inputcorreoc" class="col-sm-2 col-form-label form-label">Correo electrónico</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="correo_add" name="correo_add" placeholder="@mail.com">
+                                                    <input type="email" class="form-control" id="correo_add" name="correo_add" placeholder="@mail.com">
                                                 </div>
                                             </div>                                        
 

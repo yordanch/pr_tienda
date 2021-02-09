@@ -84,13 +84,19 @@
                                              <div class="form-group row">
                                                 <label for="inputcord" class="col-sm-2 col-form-label form-label">Coordenadas</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="coord_add" name="coord_add" placeholder="Ingresar coordenadas">
+                                                    <table class="table">
+                                                        <tr>
+                                                            <td><input type="text" class="form-control" id="coord_add" name="coord_add" placeholder="Ingresar coordenadas" value=""></td>
+                                                            <td><a href="javascript:micoord()" class="btn btn-info">Buscar</a></td>
+                                                        </tr>
+                                                    </table>
+                                                    <hr>                                                    
                                                 </div>
                                             </div>                                           
                                             <div class="form-group row">
                                                 <label for="inputcorreo" class="col-sm-2 col-form-label form-label">Correo institucional</label>
                                                 <div class="col-sm-10">
-                                                    <input type="mail" class="form-control" id="emailinst_add" name="emailinst_add" placeholder="@mail.com">
+                                                    <input type="email" class="form-control" id="emailinst_add" name="emailinst_add" placeholder="@mail.com">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -106,7 +112,7 @@
                                             <div class="form-group row">
                                                 <label for="inputuscorreo" class="col-sm-2 col-form-label form-label">Correo Administrador</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control" id="email_add" name="email_add" placeholder="@mail.com">
+                                                    <input type="email" class="form-control" id="email_add" name="email_add" placeholder="@mail.com">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -143,6 +149,10 @@
 
     <script src="../../../js/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="../../../css/sweetalert2.min.css">
+    <script type="text/javascript">
+    
+   
+</script>
     <script src="../../../script/functions.js"></script>
 
     <script src="../../script/tienda.js"></script>  <!-- Modificar aquí -->
@@ -170,6 +180,7 @@
         }, false);
     })();
     </script>
+
 </body>
 
 </html>

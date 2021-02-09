@@ -19,9 +19,6 @@
             $res = $this->serv->ejecutarConsultaD();
             return $res;
         }
-        function add(){
-
-        }
         function upd(){
 
         }
